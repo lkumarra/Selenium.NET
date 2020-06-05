@@ -46,6 +46,7 @@
       <HintPath>..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -56,13 +57,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\AppConfigReader.cs" />
+    <Compile Include="CustomException\NoSuitableDriverFound.cs" />
+    <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Pages\Actions\EditCustomerPage.cs" />
     <Compile Include="Pages\Actions\HomePage.cs" />
     <Compile Include="Pages\Actions\LoginPage.cs" />
     <Compile Include="Pages\Actions\NewCustomerPage.cs" />
     <Compile Include="Pages\Locators\HomePageLocator.cs" />
     <Compile Include="Pages\Locators\LoginPageLocators.cs" />
-    <Compile Include="TestBase\Constants.cs" />
+    <Compile Include="Setting\AppConfigKeys.cs" />
+    <Compile Include="Setting\ObjectRepsitory.cs" />
     <Compile Include="TestBase\Page.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCase\LoginTest.cs" />
@@ -70,10 +75,10 @@
     <Compile Include="Utilities\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Config\App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Config\" />
     <Folder Include="Logs\" />
     <Folder Include="TestReports\" />
   </ItemGroup>

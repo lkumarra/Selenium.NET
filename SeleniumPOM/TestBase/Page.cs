@@ -1,11 +1,10 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using SeleniumPOM.Config;
+using SeleniumPOM.CustomException;
+using SeleniumPOM.Setting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumPOM.TestBase
 {
@@ -16,15 +15,19 @@ namespace SeleniumPOM.TestBase
 
      public static void Initialization()
         {
-            if (Constants.BrowserName.Equals("Chrome"))
+            ObjectRepsitory.config = new AppConfigReader();
+            if (ObjectRepsitory.config.GetBrowser().Equals("Chrome"))
             {
                 driver = new ChromeDriver();
 
-               } else if (Constants.BrowserName.Equals("Firefox"))
+               } else if (ObjectRepsitory.config.GetBrowser().Equals("Firefox"))
             {
                 driver = new FirefoxDriver();
+            }else
+            {
+                throw new NoSuitableDriverFound("Suitable Driver Not Found");
             }
-            driver.Navigate().GoToUrl(Constants.Url);
+            driver.Navigate().GoToUrl(ObjectRepsitory.config.GetUrl());
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             driver.Manage().Cookies.DeleteAllCookies();

@@ -15,3 +15,5 @@ C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\obj\Debug\Selenium
 C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\obj\Debug\SeleniumPOM.csproj.CopyComplete
 C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\obj\Debug\SeleniumPOM.dll
 C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\obj\Debug\SeleniumPOM.pdb
+C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\bin\Debug\SeleniumPOM.dll.config
+C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\obj\Debug\SeleniumPOM.csprojAssemblyReference.cache

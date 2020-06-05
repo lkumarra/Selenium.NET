@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SeleniumPOM.Config;
+using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Actions;
 using SeleniumPOM.TestBase;
 
@@ -10,13 +13,14 @@ namespace SeleniumPOM
     {
         HomePage homerPage;
         LoginPage loginPage;
-
+        IConfig config;
         [TestInitialize]
         public void SetUp()
         {
             Page.Initialization();
+            config = new AppConfigReader();
             loginPage = new LoginPage();
-            homerPage = loginPage.Login(Constants.UserName, Constants.Password);
+            homerPage = loginPage.Login(config.GetUserName(), config.GetPassword());
         }
 
         [TestMethod]
