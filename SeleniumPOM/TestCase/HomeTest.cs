@@ -5,11 +5,12 @@ using SeleniumPOM.Config;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Actions;
 using SeleniumPOM.TestBase;
+using SeleniumPOM.TestContextClass;
 
 namespace SeleniumPOM
 {
     [TestClass]
-    public class HomeTest
+    public class HomeTest : TestClassContext
     {
         HomePage homerPage;
         LoginPage loginPage;
@@ -26,19 +27,21 @@ namespace SeleniumPOM
         [TestMethod]
         public void VerifyWelcomeMessage()
         {
-
+            Console.WriteLine("Test Case Name :{0}", TestContext.TestName);
             Assert.AreEqual(homerPage.GetWelcomeMessage(), "Welcome To Manager's Page of Guru99 Bank");
         }
 
         [TestMethod]
         public void VerifyMangerID()
         {
+            Console.WriteLine("Test Case Name :{0}", TestContext.TestName);
             Assert.AreEqual(homerPage.GetManagerID(), "Manger Id : mngr261615");
         }
 
         [TestCleanup]
         public void TearDown()
         {
+            Console.WriteLine("Resuult :{0}", TestContext.CurrentTestOutcome);
             Page.QuitSession();
         }
     }

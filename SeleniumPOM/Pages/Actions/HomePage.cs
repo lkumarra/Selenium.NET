@@ -1,15 +1,16 @@
 ﻿using OpenQA.Selenium.Support.PageObjects;
+using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Locators;
 using SeleniumPOM.TestBase;
 using SeleniumPOM.Utilities;
 
 namespace SeleniumPOM.Pages.Actions
 {
-    class HomePage : Page
+    class HomePage : Page, IHomePage
     {
 
         HomePageLocator locator;
-        Utils util = new Utils();
+        readonly Utils util = new Utils();
 
         public HomePage()
         {

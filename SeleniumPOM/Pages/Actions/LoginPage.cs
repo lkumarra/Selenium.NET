@@ -1,14 +1,15 @@
 ﻿using OpenQA.Selenium.Support.PageObjects;
+using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Locators;
 using SeleniumPOM.TestBase;
 using SeleniumPOM.Utilities;
 
 namespace SeleniumPOM.Pages.Actions
 {
-    class LoginPage : Page
+    class LoginPage : Page, ILoginPage
     {
         LoginPageLocators locators;
-        Utils utils = new Utils();
+        readonly Utils utils = new Utils();
 
         public LoginPage()
         {

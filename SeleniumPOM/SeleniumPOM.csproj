@@ -72,6 +72,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCase\LoginTest.cs" />
     <Compile Include="TestCase\HomeTest.cs" />
+    <Compile Include="TestContextClass\TestClassContext.cs" />
     <Compile Include="Utilities\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
