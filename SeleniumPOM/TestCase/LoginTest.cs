@@ -12,7 +12,7 @@ namespace SeleniumPOM
     [TestClass]
     public class LoginTest : TestClassContext
     {
-        LoginPage loginPage;
+        ILoginPage loginPage;
         IConfig config;
         [TestInitialize]
         public void SetUp()

@@ -12,8 +12,8 @@ namespace SeleniumPOM
     [TestClass]
     public class HomeTest : TestClassContext
     {
-        HomePage homerPage;
-        LoginPage loginPage;
+        IHomePage homerPage;
+        ILoginPage loginPage;
         IConfig config;
         [TestInitialize]
         public void SetUp()

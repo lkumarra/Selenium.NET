@@ -48,6 +48,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
@@ -60,24 +61,33 @@
     <Compile Include="Config\AppConfigReader.cs" />
     <Compile Include="CustomException\NoSuitableDriverFound.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
+    <Compile Include="Interfaces\IEditCostumerPage.cs" />
+    <Compile Include="Interfaces\IHomePage.cs" />
+    <Compile Include="Interfaces\ILoginPage.cs" />
+    <Compile Include="Interfaces\INewCostumerPage.cs" />
+    <Compile Include="Interfaces\IUtil.cs" />
     <Compile Include="Pages\Actions\EditCustomerPage.cs" />
     <Compile Include="Pages\Actions\HomePage.cs" />
     <Compile Include="Pages\Actions\LoginPage.cs" />
     <Compile Include="Pages\Actions\NewCustomerPage.cs" />
+    <Compile Include="Pages\Locators\EditCostumerLocator.cs" />
     <Compile Include="Pages\Locators\HomePageLocator.cs" />
     <Compile Include="Pages\Locators\LoginPageLocators.cs" />
+    <Compile Include="Pages\Locators\NewCustomerLocators.cs" />
     <Compile Include="Setting\AppConfigKeys.cs" />
     <Compile Include="Setting\ObjectRepsitory.cs" />
     <Compile Include="TestBase\Page.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCase\LoginTest.cs" />
     <Compile Include="TestCase\HomeTest.cs" />
+    <Compile Include="TestCase\EditCustomerTest.cs" />
     <Compile Include="TestContextClass\TestClassContext.cs" />
     <Compile Include="Utilities\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Config\App.config" />
     <None Include="packages.config" />
+    <None Include="TestData\Guru99Bank.csv" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Logs\" />

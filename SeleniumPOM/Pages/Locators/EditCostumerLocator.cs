@@ -39,12 +39,9 @@ namespace SeleniumPOM.Pages.Locators
 
         public IWebElement GetCustomerIDMessageLocator()
         {
-            return CosutumerId;
+            return CustomerIDMessage;
         }
 
-        public string GetCostumerIDAlertMessage()
-        {
-
-        }
+     
     }
 }
