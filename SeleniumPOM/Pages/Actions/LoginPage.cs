@@ -9,7 +9,7 @@ namespace SeleniumPOM.Pages.Actions
     class LoginPage : Page, ILoginPage
     {
         LoginPageLocators locators;
-        readonly Utils utils = new Utils();
+        readonly IUtil utils = new Utils();
 
         public LoginPage()
         {

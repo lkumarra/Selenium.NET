@@ -25,17 +25,19 @@ namespace SeleniumPOM
         }
 
         [TestMethod]
+        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "HomePage$", DataAccessMethod.Sequential)]
         public void VerifyWelcomeMessage()
         {
             Console.WriteLine("Test Case Name :{0}", TestContext.TestName);
-            Assert.AreEqual(homerPage.GetWelcomeMessage(), "Welcome To Manager's Page of Guru99 Bank");
+            Assert.AreEqual(homerPage.GetWelcomeMessage(), TestContext.DataRow["WelcomeMessage"]);
         }
 
         [TestMethod]
+        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "HomePage$", DataAccessMethod.Sequential)]
         public void VerifyMangerID()
         {
             Console.WriteLine("Test Case Name :{0}", TestContext.TestName);
-            Assert.AreEqual(homerPage.GetManagerID(), "Manger Id : mngr261615");
+            Assert.AreEqual(homerPage.GetManagerID(), TestContext.DataRow["ManegerID"]);
         }
 
         [TestCleanup]

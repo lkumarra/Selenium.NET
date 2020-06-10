@@ -10,7 +10,7 @@ namespace SeleniumPOM.Pages.Actions
     {
 
         HomePageLocator locator;
-        readonly Utils util = new Utils();
+        readonly IUtil util = new Utils();
 
         public HomePage()
         {

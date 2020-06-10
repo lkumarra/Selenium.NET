@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumPOM.Config;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Actions;
@@ -26,11 +25,11 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", @"C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.csv", "Guru99Bank#csv", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "EditCustomerPage$", DataAccessMethod.Sequential)]
         public void VerifyCustomerIDEnteringInvalidCharacters()
         {
             string Message = editCostumerPage.CustomerIDInvaildCharactersAndMessageText(TestContext.DataRow["Data"].ToString());
-            Assert.AreEqual(Message, TestContext.DataRow["Expected Message"].ToString());
+            Assert.AreEqual(Message, TestContext.DataRow["ExpectedMessage"].ToString());
         }
 
         [TestCleanup]

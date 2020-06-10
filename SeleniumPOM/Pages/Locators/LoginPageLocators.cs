@@ -11,10 +11,10 @@ namespace SeleniumPOM.Pages.Locators
     class LoginPageLocators
     {
 
-        [FindsBy(How = How.Name, Using ="uid")]
+        [FindsBy(How = How.Name, Using = "uid")]
         private IWebElement UserID { get; set; }
 
-        [FindsBy(How = How.Name, Using ="password")]
+        [FindsBy(How = How.Name, Using = "password")]
         private IWebElement Password { get; set; }
 
         [FindsBy(How = How.Name, Using = "btnLogin")]
@@ -23,24 +23,40 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.Name, Using = "btnReset")]
         private IWebElement ResetButton { get; set; }
 
+        /// <summary>
+        /// Return the locator of UserID Field.
+        /// </summary>
+        /// <returns>UserID Field Locator</returns>
         public IWebElement GetUserIDLocator()
         {
-            return this.UserID;
+            return UserID;
         }
 
+        /// <summary>
+        /// Return the locator of Password Field.
+        /// </summary>
+        /// <returns>Password field locator</returns>
         public IWebElement GetPasswordLocator()
         {
-            return this.Password;
+            return Password;
         }
 
+        /// <summary>
+        /// Return the locator of login button.
+        /// </summary>
+        /// <returns>Login Button Locator</returns>
         public IWebElement GetLoginButtonLocator()
         {
-            return this.LoginButton;
+            return LoginButton;
         }
 
+        /// <summary>
+        /// Return the locator of reset button.
+        /// </summary>
+        /// <returns>Reset Button Locator</returns>
         public IWebElement GetResetButtonLocator()
         {
-            return this.ResetButton;
+            return ResetButton;
         }
 
     }

@@ -81,13 +81,16 @@
     <Compile Include="TestCase\LoginTest.cs" />
     <Compile Include="TestCase\HomeTest.cs" />
     <Compile Include="TestCase\EditCustomerTest.cs" />
+    <Compile Include="TestCase\NewCustomerTest.cs" />
     <Compile Include="TestContextClass\TestClassContext.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Utilities\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Config\App.config" />
     <None Include="packages.config" />
     <None Include="TestData\Guru99Bank.csv" />
+    <None Include="TestData\Guru99Bank.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Logs\" />

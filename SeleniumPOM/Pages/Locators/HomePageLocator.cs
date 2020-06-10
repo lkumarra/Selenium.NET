@@ -18,24 +18,40 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.LinkText, Using = "Edit Customer")]
         private IWebElement EditCustomer { get; set; }
 
+        /// <summary>
+        /// Return the locator of welcome message.
+        /// </summary>
+        /// <returns>Welcome Message Locator</returns>
         public IWebElement GetWelcomeMessageLocator()
         {
-            return this.WelcomeMessage;
+            return WelcomeMessage;
         }
 
+        /// <summary>
+        /// Return the Locator of Manager ID.
+        /// </summary>
+        /// <returns>Manager ID Locator</returns>
         public IWebElement GetManagerIDLocator()
         {
-            return this.ManagerID;
+            return ManagerID;
         }
 
+        /// <summary>
+        /// Return the Locator of EditCustomer Link.
+        /// </summary>
+        /// <returns>New Customer Link Locator</returns>
         public IWebElement GetNewCustomerLinkLocator()
         {
-            return this.NewCustomerLink;
+            return NewCustomerLink;
         }
 
+        /// <summary>
+        /// Return the locator of NewCustomer Link.
+        /// </summary>
+        /// <returns>Edit Customer Link Locator</returns>
         public IWebElement GetEditCustomerLinkLocator()
         {
-            return this.EditCustomer;
+            return EditCustomer;
         }
 
     }
