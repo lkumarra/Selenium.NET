@@ -29,6 +29,78 @@ namespace SeleniumPOM.Interfaces
         /// </summary>
         /// <returns>Object of EditCustomer Page</returns>
         EditCustomerPage ClickOnEditCustomerPage();
-        
+
+        /// <summary>
+        /// Click on DeleteCustomer Link.
+        /// </summary>
+        /// <returns>Object of DeleteCuctomer Page</returns>
+        DeleteCustomerPage ClickOnDeleteCustomerPage();
+
+        /// <summary>
+        /// Click on NewAccount Link.
+        /// </summary>
+        /// <returns>Object of NewAccount Page</returns>
+        NewAccountPage ClickOnNewAccountPage();
+
+        /// <summary>
+        /// Click On EditAccount Link.
+        /// </summary>
+        /// <returns>Object of EditAccount Page</returns>
+        EditAccountPage ClickOnEditAccountPage();
+
+        /// <summary>
+        /// Click on DeleteAccount Link.
+        /// </summary>
+        /// <returns>Object of DeleteAccount Page</returns>
+        DeleteAccountPage ClickOnDeleteAccountPage();
+
+        /// <summary>
+        /// Click on Deposit Link.
+        /// </summary>
+        /// <returns>Object of Deposit Page</returns>
+        DepositPage ClickOnDepositPage();
+
+        /// <summary>
+        /// Click on Withdrawal Link.
+        /// </summary>
+        /// <returns>Object of Withdrawal Page</returns>
+        WithdrawalPage ClickOnWithdrawalPage();
+
+        /// <summary>
+        /// Click on FundTransfer Link.
+        /// </summary>
+        /// <returns>Object of Fundtransfer Page</returns>
+        FundTrasferPage ClickOnFundTransferPage();
+
+        /// <summary>
+        /// Click on ChangePassword Link.
+        /// </summary>
+        /// <returns>Object of ChangePassword Page</returns>
+        ChangePasswordPage ClickOnChangePasswordPage();
+
+        /// <summary>
+        /// Click on BalanceEnquiry Link.
+        /// </summary>
+        /// <returns>Object of BalanceEnquiry Page</returns>
+        BalanceEnquiryPage ClickOnBalanceEnquiryPage();
+
+        /// <summary>
+        /// Click on MiniStatement Link.
+        /// </summary>
+        /// <returns>Object of MiniStatement Page</returns>
+        MiniStatementPage ClickOnMiniSatatementPage();
+
+        /// <summary>
+        /// Click on CustomisedStatement Link.
+        /// </summary>
+        /// <returns>object of CustomisedStatement Page</returns>
+        CustomisedStatementPage ClickOnCustomisedStatementPage();
+
+        /// <summary>
+        /// Click on Logout Link.
+        /// </summary>
+        /// <returns>Object of Logout Page</returns>
+        LogoutPage ClickOnLogoutPage();
+
     }
 }
