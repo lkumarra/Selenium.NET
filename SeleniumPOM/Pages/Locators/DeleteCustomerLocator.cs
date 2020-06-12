@@ -19,7 +19,7 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.Name, Using = "res")]
         private IWebElement ResetButton { get; set; }
 
-        [FindsBy(How = How.Id, Using = "message14")]
+        [FindsBy(How = How.XPath, Using = "//label[contains(@id, 'message')]")]
         private IWebElement CustomerIDMessage { get; set; }
 
         /// <summary>

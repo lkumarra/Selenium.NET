@@ -14,48 +14,49 @@ namespace SeleniumPOM.Pages.Actions
     class NewAccountPage : Page, INewAccountPage
     {
 
-        NewCustomerLocators locators;
+        NewAccountLocator locators;
         readonly IUtil util = new Utils();
 
         public NewAccountPage()
         {
-            locators = new NewCustomerLocators();
-            PageFactory.InitElements(driver, locators)
+            locators = new NewAccountLocator();
+            PageFactory.InitElements(driver, locators);
         }
 
         public void SetCustomerID(string CustomerId)
         {
-
+            util.EnterTextIntoElement(locators.GetCustomerIDLocator(), CustomerId);
         }
 
         public void SelectAccountType(string AccountType)
         {
-
+            util.SelectByVisibleText(locators.GetAccountTypeLocator(), AccountType);
         }
 
         public void SetInitialDeposit(string Deposit)
         {
-
+            util.EnterTextIntoElement(locators.GetInitialDepositLocator(), Deposit);
         }
 
         public void ClickOnSubmitButton()
         {
-
+            util.ClickOnElement(locators.GetSubmitButtonLocator());
         }
 
         public void ClickOnResetButton()
         {
-
+            util.ClickOnElement(locators.GetResetButtonLocator());
         }
 
         public string GetCustomerIDMessage()
         {
-
+            return util.GetElementText(locators.GetCustomerIDMessageLocator());
         }
 
         public string EnterInvalidCharacterAndGetCustomerIDMessge(string characters)
         {
-
+            SetCustomerID(characters);
+            return GetCustomerIDMessage();
         }
 
     }

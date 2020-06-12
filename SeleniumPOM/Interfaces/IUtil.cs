@@ -53,6 +53,18 @@ namespace SeleniumPOM.Interfaces
         /// </summary>
         /// <returns>Text of the alert</returns>
         string GetAlertTextAndAccept();
-       
+
+        /// <summary>
+        /// Select the value from dropdown using text.
+        /// </summary>
+        /// <param name="Elemenet">Element of DropDown</param>
+        /// <param name="Text">Option to Select from DropDown</param>
+        void SelectByVisibleText(IWebElement Elemenet, string Text);
+
+
+        /// <summary>
+        /// Execute the javascript to scroll page.
+        /// </summary>
+        void JSExecutor();
     }
 }

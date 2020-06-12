@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumPOM.Config;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Actions;
@@ -8,27 +9,28 @@ using SeleniumPOM.TestContextClass;
 namespace SeleniumPOM.TestCase
 {
     [TestClass]
-    public class EditCustomerTest : TestClassContext
+    public class DeleteCustomerTest : TestClassContext
     {
         ILoginPage loginPage;
         IConfig config;
         IHomePage homePage;
-        IEditCostumerPage editCostumerPage;
+        IDeleteCustomerPage deleteCustomerPage;
+
         [TestInitialize]
         public void SetUp()
         {
             Page.Initialization();
-            loginPage = new LoginPage();
             config = new AppConfigReader();
+            loginPage = new LoginPage();
             homePage = loginPage.Login(config.GetUserName(), config.GetPassword());
-            editCostumerPage = homePage.ClickOnEditCustomerPage();
+            deleteCustomerPage = homePage.ClickOnDeleteCustomerPage();
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "EditCustomerPage$", DataAccessMethod.Sequential)]
-        public void VerifyCustomerIDEnteringInvalidCharacters()
+        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "DeleteCustomer$", DataAccessMethod.Sequential)]
+        public void VerifyCustomerIdMessage()
         {
-            string ActualMessage = editCostumerPage.CustomerIDInvaildCharactersAndMessageText(TestContext.DataRow["Data"].ToString());
+            string ActualMessage = deleteCustomerPage.EnterInvalidCharacterAndGetMessage(TestContext.DataRow["Data"].ToString());
             Assert.AreEqual(ActualMessage, TestContext.DataRow["ExpectedMessage"].ToString());
         }
 
@@ -37,6 +39,5 @@ namespace SeleniumPOM.TestCase
         {
             Page.QuitSession();
         }
-
     }
 }

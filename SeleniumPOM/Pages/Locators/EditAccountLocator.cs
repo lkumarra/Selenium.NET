@@ -19,6 +19,9 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.Name, Using = "res")]
         private IWebElement ResetButton { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//input[@name='accountno']/following-sibling::label")]
+        private IWebElement AccountNumberMessage { get; set; }
+
         /// <summary>
         /// Return the locator of Account Number field on Edit Account Page.
         /// </summary>
@@ -38,12 +41,21 @@ namespace SeleniumPOM.Pages.Locators
         }
 
         /// <summary>
-        /// Return the locator of ResetButton on New Customer Page.
+        /// Return the locator of ResetButton on Edit Account  Page.
         /// </summary>
         /// <returns>Locator of Reset Button</returns>
         public IWebElement GetResetButtonLocator()
         {
             return ResetButton;
+        }
+
+        /// <summary>
+        /// Return the locator of Account Number Message on Edit Account Page.
+        /// </summary>
+        /// <returns>Locator of Account Number Message</returns>
+        public IWebElement GetAccountNumberMessageLocator()
+        {
+            return AccountNumberMessage;
         }
     }
 }

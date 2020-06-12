@@ -58,6 +58,5 @@ namespace SeleniumPOM.Pages.Locators
             return CustomerIDMessage;
         }
 
-
     }
 }

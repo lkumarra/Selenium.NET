@@ -29,6 +29,9 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.Name, Using = "res")]
         private IWebElement ResetButton { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//input[@name='payersaccount']/following-sibling::label")]
+        private IWebElement PayersAccountMessage { get; set; }
+
         /// <summary>
         /// Return the locator of Payers Account Number field on Fund Transfer Page.
         /// </summary>
@@ -83,5 +86,13 @@ namespace SeleniumPOM.Pages.Locators
             return ResetButton;
         }
 
+        /// <summary>
+        /// Return the locator of PayersAccount Number Message.
+        /// </summary>
+        /// <returns>Payers Account Number Message</returns>
+        public IWebElement GetPayersAccountMessageLocator()
+        {
+            return PayersAccountMessage;
+        }
     }
 }

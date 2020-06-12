@@ -32,10 +32,10 @@ namespace SeleniumPOM.TestBase
             {
                 throw new NoSuitableDriverFound("Suitable Driver Not Found");
             }
+            driver.Manage().Cookies.DeleteAllCookies();
             driver.Navigate().GoToUrl(ObjectRepsitory.config.GetUrl());
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-            driver.Manage().Cookies.DeleteAllCookies();
         }
 
         /// <summary>

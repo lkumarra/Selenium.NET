@@ -32,6 +32,9 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.Name, Using = "res")]
         private IWebElement ResetButton { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//input[@name='accountno']/following-sibling::label")]
+        private IWebElement AccountNumberMessage { get; set; }
+
         /// <summary>
         /// Retun the locator of account number field on CustomisedStatement Page.
         /// </summary>
@@ -95,5 +98,13 @@ namespace SeleniumPOM.Pages.Locators
             return ResetButton;
         }
 
+        /// <summary>
+        /// Return the locator of Account Number Message on Customised Statement Page
+        /// </summary>
+        /// <returns>Locator of Account Number Message</returns>
+        public IWebElement GetAccountNumberMessageLocator()
+        {
+            return AccountNumberMessage;
+        }
     }
 }

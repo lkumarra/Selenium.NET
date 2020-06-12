@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,9 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.Name, Using = "reset")]
         private IWebElement ResetButton { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//input[@name='cusid']/following-sibling::label")]
+        private IWebElement CustomerIdMessage { get; set; }
+
         /// <summary>
         /// Return the locator of CustomerID field on New Account Page.
         /// </summary>
@@ -44,6 +48,15 @@ namespace SeleniumPOM.Pages.Locators
         }
 
         /// <summary>
+        /// Return the locator of InitialDeposit field on New Customer Page.
+        /// </summary>
+        /// <returns>Locator of InitialDeposit field</returns>
+        public IWebElement GetInitialDepositLocator()
+        {
+            return InitialDeposit;
+        }
+
+        /// <summary>
         /// Return the locator of SubmitButton on New Customer Page.
         /// </summary>
         /// <returns>Locator of Submit Button</returns>
@@ -59,6 +72,15 @@ namespace SeleniumPOM.Pages.Locators
         public IWebElement GetResetButtonLocator()
         {
             return ResetButton;
+        }
+
+        /// <summary>
+        /// Return the locator of CustomerID Message on NewCustomer Page.
+        /// </summary>
+        /// <returns>Locator of CustomerID Message</returns>
+        public IWebElement GetCustomerIDMessageLocator()
+        {
+            return CustomerIdMessage;
         }
     }
 }

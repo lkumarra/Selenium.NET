@@ -30,84 +30,98 @@ namespace SeleniumPOM.Pages.Actions
 
         public NewCustomerPage ClickOnNewCustomerLink()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetNewCustomerLinkLocator());
             return new NewCustomerPage();
         }
 
         public EditCustomerPage ClickOnEditCustomerPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetEditCustomerLinkLocator());
             return new EditCustomerPage();
         }
 
         public DeleteCustomerPage ClickOnDeleteCustomerPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetDeleteCustomerLinkLocator());
             return new DeleteCustomerPage();
         }
 
         public NewAccountPage ClickOnNewAccountPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetNewAccountLinkLocator());
             return new NewAccountPage();
         }
 
         public EditAccountPage ClickOnEditAccountPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetEditAccountLinkLocator());
             return new EditAccountPage();
         }
 
         public DeleteAccountPage ClickOnDeleteAccountPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetDeleteAccountLinkLocator());
             return new DeleteAccountPage();
         }
 
         public DepositPage ClickOnDepositPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetDepositLinkLocator());
             return new DepositPage();
         }
 
         public WithdrawalPage ClickOnWithdrawalPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetWithdrawalLinkLocator());
             return new WithdrawalPage();
         }
 
         public FundTrasferPage ClickOnFundTransferPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetFundTransferLinkLocator());
             return new FundTrasferPage();
         }
 
         public ChangePasswordPage ClickOnChangePasswordPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetChangePasswordLinkLocator());
             return new ChangePasswordPage();
         }
 
         public BalanceEnquiryPage ClickOnBalanceEnquiryPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetBalanceEnquiryLinkLocator());
             return new BalanceEnquiryPage();
         }
 
         public MiniStatementPage ClickOnMiniSatatementPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetMiniStatementLinkLocator());
             return new MiniStatementPage();
         }
 
         public CustomisedStatementPage ClickOnCustomisedStatementPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetCustomisedStatementLinkLocator());
             return new CustomisedStatementPage();
         }
 
         public LogoutPage ClickOnLogoutPage()
         {
+            util.JSExecutor();
             util.ClickOnElement(locator.GetLogoutLinkLocator());
             return new LogoutPage();
         }

@@ -25,6 +25,9 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.Name, Using = "res")]
         private IWebElement ResetButton { get; set; }
 
+        [FindsBy(How = How.XPath, Using = "//input[@name='accountno']/following-sibling::label")]
+        private IWebElement AccountNumberMessage { get; set; }
+
         /// <summary>
         /// Return the locator of account number field on Withdrawal Page.
         /// </summary>
@@ -68,6 +71,15 @@ namespace SeleniumPOM.Pages.Locators
         public IWebElement GetResetButtonLocator()
         {
             return ResetButton;
+        }
+
+        /// <summary>
+        /// Return the locator of account number message on Withdrawal Page.
+        /// </summary>
+        /// <returns>Locator of account number message</returns>
+        public IWebElement GetAccountNumberMessage()
+        {
+            return AccountNumberMessage;
         }
     }
 }

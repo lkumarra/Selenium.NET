@@ -30,24 +30,24 @@ namespace SeleniumPOM.TestCase
         [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "NewCustomerPage$", DataAccessMethod.Sequential)]
         public void VerifyCustomerNameByEnteringNumbers()
         {
-            string ExpectedMessage = newCostumerPage.EnterInvalidCharacterInCustomerName(TestContext.DataRow["Data"].ToString());
-            Assert.AreEqual(ExpectedMessage, TestContext.DataRow["ExpectedMessage"].ToString());
+            string ActualMessage = newCostumerPage.EnterInvalidCharacterInCustomerName(TestContext.DataRow["Data"].ToString());
+            Assert.AreEqual(ActualMessage, TestContext.DataRow["ExpectedMessage"].ToString());
         }
 
         [TestMethod]
         [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "NewCustomerPage$", DataAccessMethod.Sequential)]
         public void VerifyCustomerNameMaxCharactersLength()
         {
-            string ExpectedMessage = newCostumerPage.EnterMaximumCharactersInCustomerName(TestContext.DataRow["MaxCharacter"].ToString());
-            Assert.AreEqual(ExpectedMessage, TestContext.DataRow["Length"].ToString());
+            string ActualMessage = newCostumerPage.EnterMaximumCharactersInCustomerName(TestContext.DataRow["MaxCharacter"].ToString());
+            Assert.AreEqual(ActualMessage, TestContext.DataRow["Length"].ToString());
         }
 
         [TestMethod]
         [DataSource("System.Data.Odbc", @"Dsn=Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "NewCustomerPage$", DataAccessMethod.Sequential)]
         public void VerifyCustomerNameWithoutEnteringValue()
         {
-            string ExpectedMessage = newCostumerPage.CustomerNameBlankVerify();
-            Assert.AreEqual(ExpectedMessage, TestContext.DataRow["BlankMessage"].ToString());
+            string ActualMessage = newCostumerPage.CustomerNameBlankVerify();
+            Assert.AreEqual(ActualMessage, TestContext.DataRow["BlankMessage"].ToString());
         }
 
         [TestCleanup]

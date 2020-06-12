@@ -6,7 +6,7 @@ using System;
 
 namespace SeleniumPOM.Utilities
 {
-    
+
     class Utils : Page, IUtil
     {
         private static void ElementToBeClickableWait(IWebElement element)
@@ -48,10 +48,22 @@ namespace SeleniumPOM.Utilities
 
         public string GetAlertTextAndAccept()
         {
-           IAlert Alert = driver.SwitchTo().Alert();
+            IAlert Alert = driver.SwitchTo().Alert();
             string AlertText = Alert.Text;
             Alert.Accept();
             return AlertText;
+        }
+
+        public void SelectByVisibleText(IWebElement Elemenet, string Text)
+        {
+            SelectElement select = new SelectElement(Elemenet);
+            select.SelectByText(Text);
+        }
+
+        public void JSExecutor()
+        {
+            IJavaScriptExecutor javaScriptExecutor = (IJavaScriptExecutor)driver;
+            javaScriptExecutor.ExecuteScript("arguments[0].scrollIntoView();", driver.FindElement(By.LinkText("Log out")));
         }
     }
 }
