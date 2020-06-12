@@ -27,7 +27,7 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "BalanceEnquiry$", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "BalanceEnquiry$", DataAccessMethod.Sequential)]
         public void VerifyAccountNumberMessage()
         {
             string ActualMessage = balanceEnquiryPage.EnterInvalidCharactersAndGetMessage(TestContext.DataRow["Data"].ToString());

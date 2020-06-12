@@ -66,5 +66,11 @@ namespace SeleniumPOM.Interfaces
         /// Execute the javascript to scroll page.
         /// </summary>
         void JSExecutor();
+
+        /// <summary>
+        /// Perform click operation using javascript
+        /// </summary>
+        /// <param name="Element">Element to perform click</param>
+        void JSExecutorClick(IWebElement Element);
     }
 }

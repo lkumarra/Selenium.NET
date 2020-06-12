@@ -25,7 +25,7 @@ namespace SeleniumPOM
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "HomePage$", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "HomePage$", DataAccessMethod.Sequential)]
         public void VerifyWelcomeMessage()
         {
             Console.WriteLine("Test Case Name :{0}", TestContext.TestName);
@@ -33,7 +33,7 @@ namespace SeleniumPOM
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "HomePage$", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "HomePage$", DataAccessMethod.Sequential)]
         public void VerifyMangerID()
         {
             Console.WriteLine("Test Case Name :{0}", TestContext.TestName);

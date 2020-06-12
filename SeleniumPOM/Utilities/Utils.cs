@@ -65,5 +65,11 @@ namespace SeleniumPOM.Utilities
             IJavaScriptExecutor javaScriptExecutor = (IJavaScriptExecutor)driver;
             javaScriptExecutor.ExecuteScript("arguments[0].scrollIntoView();", driver.FindElement(By.LinkText("Log out")));
         }
+
+        public void JSExecutorClick(IWebElement Element)
+        {
+            IJavaScriptExecutor javaScriptExecutor = (IJavaScriptExecutor)driver;
+            javaScriptExecutor.ExecuteScript("arguments[0].click();", Element);
+        }
     }
 }

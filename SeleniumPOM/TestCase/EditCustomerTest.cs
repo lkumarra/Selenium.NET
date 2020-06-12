@@ -25,7 +25,7 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "EditCustomerPage$", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "EditCustomerPage$", DataAccessMethod.Sequential)]
         public void VerifyCustomerIDEnteringInvalidCharacters()
         {
             string ActualMessage = editCostumerPage.CustomerIDInvaildCharactersAndMessageText(TestContext.DataRow["Data"].ToString());

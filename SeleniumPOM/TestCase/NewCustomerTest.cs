@@ -27,7 +27,7 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "NewCustomerPage$", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "NewCustomerPage$", DataAccessMethod.Sequential)]
         public void VerifyCustomerNameByEnteringNumbers()
         {
             string ActualMessage = newCostumerPage.EnterInvalidCharacterInCustomerName(TestContext.DataRow["Data"].ToString());
@@ -35,7 +35,7 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "NewCustomerPage$", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "NewCustomerPage$", DataAccessMethod.Sequential)]
         public void VerifyCustomerNameMaxCharactersLength()
         {
             string ActualMessage = newCostumerPage.EnterMaximumCharactersInCustomerName(TestContext.DataRow["MaxCharacter"].ToString());
@@ -43,7 +43,7 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn=Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "NewCustomerPage$", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "NewCustomerPage$", DataAccessMethod.Sequential)]
         public void VerifyCustomerNameWithoutEnteringValue()
         {
             string ActualMessage = newCostumerPage.CustomerNameBlankVerify();

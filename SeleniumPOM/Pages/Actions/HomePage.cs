@@ -3,6 +3,7 @@ using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Locators;
 using SeleniumPOM.TestBase;
 using SeleniumPOM.Utilities;
+using System.Threading;
 
 namespace SeleniumPOM.Pages.Actions
 {
@@ -72,35 +73,30 @@ namespace SeleniumPOM.Pages.Actions
 
         public DepositPage ClickOnDepositPage()
         {
-            util.JSExecutor();
-            util.ClickOnElement(locator.GetDepositLinkLocator());
+            util.JSExecutorClick(locator.GetDepositLinkLocator());
             return new DepositPage();
         }
 
         public WithdrawalPage ClickOnWithdrawalPage()
         {
-            util.JSExecutor();
-            util.ClickOnElement(locator.GetWithdrawalLinkLocator());
+            util.JSExecutorClick(locator.GetWithdrawalLinkLocator());
             return new WithdrawalPage();
         }
 
         public FundTrasferPage ClickOnFundTransferPage()
         {
-            util.JSExecutor();
-            util.ClickOnElement(locator.GetFundTransferLinkLocator());
+            util.JSExecutorClick(locator.GetFundTransferLinkLocator());
             return new FundTrasferPage();
         }
 
         public BalanceEnquiryPage ClickOnBalanceEnquiryPage()
         {
-            util.JSExecutor();
-            util.ClickOnElement(locator.GetBalanceEnquiryLinkLocator());
+            util.JSExecutorClick(locator.GetBalanceEnquiryLinkLocator());
             return new BalanceEnquiryPage();
         }
 
         public MiniStatementPage ClickOnMiniSatatementPage()
         {
-            util.JSExecutor();
             util.ClickOnElement(locator.GetMiniStatementLinkLocator());
             return new MiniStatementPage();
         }

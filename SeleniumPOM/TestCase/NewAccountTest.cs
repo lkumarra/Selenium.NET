@@ -27,7 +27,7 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "NewAccount$", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "NewAccount$", DataAccessMethod.Sequential)]
         public void VerifyCustomerIdMessage()
         {
             string ActualMessage = newAccountPage.EnterInvalidCharacterAndGetCustomerIDMessge(TestContext.DataRow["Data"].ToString());

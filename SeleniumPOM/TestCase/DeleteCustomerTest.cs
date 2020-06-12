@@ -27,7 +27,7 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;", "DeleteCustomer$", DataAccessMethod.Sequential)]
+        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "DeleteCustomer$", DataAccessMethod.Sequential)]
         public void VerifyCustomerIdMessage()
         {
             string ActualMessage = deleteCustomerPage.EnterInvalidCharacterAndGetMessage(TestContext.DataRow["Data"].ToString());

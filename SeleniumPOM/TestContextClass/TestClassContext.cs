@@ -18,6 +18,6 @@ namespace SeleniumPOM.TestContextClass
             set { _testContext = value; }
         }
 
-        //public string EXCEL_SHEET_LOCATION = @"C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx";
+        public const string EXCEL_SHEET_LOCATION = @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;";
     }
 }

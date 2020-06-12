@@ -61,7 +61,6 @@
     <Compile Include="Config\AppConfigReader.cs" />
     <Compile Include="CustomException\NoSuitableDriverFound.cs" />
     <Compile Include="Interfaces\IBalanceEnquiryPage.cs" />
-    <Compile Include="Interfaces\IChangePasswordPage.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Interfaces\ICustomisedStatementPage.cs" />
     <Compile Include="Interfaces\IDeleteAccountPage.cs" />
@@ -79,7 +78,6 @@
     <Compile Include="Interfaces\IUtil.cs" />
     <Compile Include="Interfaces\IWithdrawalPage.cs" />
     <Compile Include="Pages\Actions\BalanceEnquiryPage.cs" />
-    <Compile Include="Pages\Actions\ChangePasswordPage.cs" />
     <Compile Include="Pages\Actions\CustomisedStatementPage.cs" />
     <Compile Include="Pages\Actions\DeleteAccountPage.cs" />
     <Compile Include="Pages\Actions\DeleteCustomerPage.cs" />
@@ -95,7 +93,6 @@
     <Compile Include="Pages\Actions\NewCustomerPage.cs" />
     <Compile Include="Pages\Actions\WithdrawalPage.cs" />
     <Compile Include="Pages\Locators\BalanceEnquiryLocator.cs" />
-    <Compile Include="Pages\Locators\ChangePasswordLocator.cs" />
     <Compile Include="Pages\Locators\CustomisedStatementLocator.cs" />
     <Compile Include="Pages\Locators\DeleteAccountLocator.cs" />
     <Compile Include="Pages\Locators\DeleteCustomerLocator.cs" />
