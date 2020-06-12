@@ -91,13 +91,6 @@ namespace SeleniumPOM.Pages.Actions
             return new FundTrasferPage();
         }
 
-        public ChangePasswordPage ClickOnChangePasswordPage()
-        {
-            util.JSExecutor();
-            util.ClickOnElement(locator.GetChangePasswordLinkLocator());
-            return new ChangePasswordPage();
-        }
-
         public BalanceEnquiryPage ClickOnBalanceEnquiryPage()
         {
             util.JSExecutor();

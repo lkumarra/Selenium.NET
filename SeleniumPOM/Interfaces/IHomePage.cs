@@ -73,12 +73,6 @@ namespace SeleniumPOM.Interfaces
         FundTrasferPage ClickOnFundTransferPage();
 
         /// <summary>
-        /// Click on ChangePassword Link.
-        /// </summary>
-        /// <returns>Object of ChangePassword Page</returns>
-        ChangePasswordPage ClickOnChangePasswordPage();
-
-        /// <summary>
         /// Click on BalanceEnquiry Link.
         /// </summary>
         /// <returns>Object of BalanceEnquiry Page</returns>
