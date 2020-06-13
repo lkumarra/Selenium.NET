@@ -18,9 +18,9 @@
 11. **TestReports : This Folder Contains all TestReports**
 12. **Utilities : This Folder Contains the utility class**
 
-#All logs are generated in Logs folder which contains the file FilleLogger.log and RollingFileLogger.log.
+# All logs are generated in Logs folder which contains the file FilleLogger.log and RollingFileLogger.log.
 
-#Steps to run the framework :
+# Steps to run the framework :
 1.**Import the project into visual studio**
 2.**Right click on Project in Solution Explorer**
 3.**Click on Build Solutions**
@@ -28,6 +28,6 @@
 5.**Click on Test explorer**
 6.**In the Test explorer select the test case to run a single test case or Click on Run All Tests to run all tests**
 
-#In order to send test reports on mail fill all required details in constants.cs file in config folder and uncomment the code in TestClassContext.cs in TestContextClass folder.
+# In order to send test reports on mail fill all required details in constants.cs file in config folder and uncomment the code in TestClassContext.cs in TestContextClass folder.
 
-#Html test reports will be generated in TestReports Folder.
+# Html test reports will be generated in TestReports Folder.
