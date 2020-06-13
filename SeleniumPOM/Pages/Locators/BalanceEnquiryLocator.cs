@@ -1,15 +1,12 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumPOM.Pages.Locators
 {
     class BalanceEnquiryLocator
     {
+
+        #region PageFactory
 
         [FindsBy(How = How.Name, Using = "accountno")]
         private IWebElement AccountNo { get; set; }
@@ -23,6 +20,9 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.XPath, Using = "//input[@name='accountno']/following-sibling::label")]
         private IWebElement AccountNumberMessage { get; set; }
 
+        #endregion
+
+        #region GetterMethods
         /// <summary>
         /// Return the locator of account number field on Balance Enquiry Page.
         /// </summary>
@@ -58,5 +58,7 @@ namespace SeleniumPOM.Pages.Locators
         {
             return AccountNumberMessage;
         }
+
+        #endregion
     }
 }

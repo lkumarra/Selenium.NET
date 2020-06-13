@@ -1,15 +1,12 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumPOM.Pages.Locators
 {
     class NewCustomerLocators
     {
+        #region PageFactory 
+
         [FindsBy(How = How.Name, Using = "name")]
         private IWebElement CustomerName { get; set; }
 
@@ -51,6 +48,10 @@ namespace SeleniumPOM.Pages.Locators
 
         [FindsBy(How = How.CssSelector, Using = "label#message")]
         private IWebElement CustomerNameMessage { get; set; }
+
+        #endregion
+
+        #region GetterMethods
 
         /// <summary>
         /// Return the Locator of CustomerNameField on NewCustomer Page.
@@ -177,5 +178,7 @@ namespace SeleniumPOM.Pages.Locators
         {
             return CustomerNameMessage;
         }
+
+        #endregion
     }
 }

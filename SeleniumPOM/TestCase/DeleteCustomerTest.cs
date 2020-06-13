@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumPOM.Config;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Actions;
-using SeleniumPOM.TestBase;
+using SeleniumPOM.BasePage;
 using SeleniumPOM.TestContextClass;
 
 namespace SeleniumPOM.TestCase
@@ -11,10 +11,15 @@ namespace SeleniumPOM.TestCase
     [TestClass]
     public class DeleteCustomerTest : TestClassContext
     {
+        #region Fields
+
         ILoginPage loginPage;
         IConfig config;
         IHomePage homePage;
         IDeleteCustomerPage deleteCustomerPage;
+        public const string PAGE = "DeleteCustomer$";
+
+        #endregion
 
         [TestInitialize]
         public void SetUp()
@@ -27,9 +32,10 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "DeleteCustomer$", DataAccessMethod.Sequential)]
+        [DataSource(EXCEL_PROPERTIES, EXCEL_SHEET_LOCATION, PAGE, DataAccessMethod.Sequential)]
         public void VerifyCustomerIdMessage()
         {
+            extent.CreateTest(TestContext.TestName);
             string ActualMessage = deleteCustomerPage.EnterInvalidCharacterAndGetMessage(TestContext.DataRow["Data"].ToString());
             Assert.AreEqual(ActualMessage, TestContext.DataRow["ExpectedMessage"].ToString());
         }
@@ -37,6 +43,7 @@ namespace SeleniumPOM.TestCase
         [TestCleanup]
         public void TearDown()
         {
+            SetUpResults(TestContext.CurrentTestOutcome.ToString());
             Page.QuitSession();
         }
     }

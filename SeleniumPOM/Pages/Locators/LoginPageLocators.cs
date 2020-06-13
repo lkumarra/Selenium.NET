@@ -1,15 +1,11 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumPOM.Pages.Locators
 {
     class LoginPageLocators
     {
+        #region PageFactory 
 
         [FindsBy(How = How.Name, Using = "uid")]
         private IWebElement UserID { get; set; }
@@ -22,6 +18,10 @@ namespace SeleniumPOM.Pages.Locators
 
         [FindsBy(How = How.Name, Using = "btnReset")]
         private IWebElement ResetButton { get; set; }
+
+        #endregion
+
+        #region GetterMethods
 
         /// <summary>
         /// Return the locator of UserID Field.
@@ -59,5 +59,6 @@ namespace SeleniumPOM.Pages.Locators
             return ResetButton;
         }
 
+        #endregion
     }
 }

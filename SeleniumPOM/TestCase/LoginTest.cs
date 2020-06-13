@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumPOM.Config;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Actions;
-using SeleniumPOM.TestBase;
+using SeleniumPOM.BasePage;
 using SeleniumPOM.TestContextClass;
 
 namespace SeleniumPOM
@@ -12,8 +12,13 @@ namespace SeleniumPOM
     [TestClass]
     public class LoginTest : TestClassContext
     {
+        #region Fields
+
         ILoginPage loginPage;
         IConfig config;
+
+        #endregion
+
         [TestInitialize]
         public void SetUp()
         {
@@ -25,14 +30,14 @@ namespace SeleniumPOM
         [TestMethod]
         public void VerifyLogin()
         {
-            Console.WriteLine("Test Case Name :{0}", TestContext.TestName);
+            extent.CreateTest(TestContext.TestName);
             loginPage.Login(config.GetUserName(), config.GetPassword());
         }
 
         [TestCleanup]
         public void TearDown()
         {
-            Console.WriteLine("Result :{0}", TestContext.CurrentTestOutcome);
+            SetUpResults(TestContext.CurrentTestOutcome.ToString());
             Page.QuitSession();
         }
     }

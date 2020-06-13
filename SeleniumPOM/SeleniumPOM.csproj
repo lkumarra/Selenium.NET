@@ -39,26 +39,74 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.14.0.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.14.0\lib\net472\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtentReports, Version=3.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExtentReports.3.1.3\lib\ExtentReports.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.2.0.246, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.4.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.4.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.4.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.9.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.9.0\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.4.5.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
     </Reference>
+    <Reference Include="WebDriverManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebDriverManager.2.9.1\lib\netstandard2.0\WebDriverManager.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\AppConfigReader.cs" />
+    <Compile Include="Config\Constants.cs" />
     <Compile Include="CustomException\NoSuitableDriverFound.cs" />
     <Compile Include="Interfaces\IBalanceEnquiryPage.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
@@ -71,7 +119,6 @@
     <Compile Include="Interfaces\IFundTransferPage.cs" />
     <Compile Include="Interfaces\IHomePage.cs" />
     <Compile Include="Interfaces\ILoginPage.cs" />
-    <Compile Include="Interfaces\ILogoutPage.cs" />
     <Compile Include="Interfaces\IMiniStatementPage.cs" />
     <Compile Include="Interfaces\INewAccountPage.cs" />
     <Compile Include="Interfaces\INewCostumerPage.cs" />
@@ -87,11 +134,11 @@
     <Compile Include="Pages\Actions\FundTrasferPage.cs" />
     <Compile Include="Pages\Actions\HomePage.cs" />
     <Compile Include="Pages\Actions\LoginPage.cs" />
-    <Compile Include="Pages\Actions\LogoutPage.cs" />
     <Compile Include="Pages\Actions\MiniStatementPage.cs" />
     <Compile Include="Pages\Actions\NewAccountPage.cs" />
     <Compile Include="Pages\Actions\NewCustomerPage.cs" />
     <Compile Include="Pages\Actions\WithdrawalPage.cs" />
+    <Compile Include="Pages\BasePage\Page.cs" />
     <Compile Include="Pages\Locators\BalanceEnquiryLocator.cs" />
     <Compile Include="Pages\Locators\CustomisedStatementLocator.cs" />
     <Compile Include="Pages\Locators\DeleteAccountLocator.cs" />
@@ -108,7 +155,6 @@
     <Compile Include="Pages\Locators\WithdrawalLocator.cs" />
     <Compile Include="Setting\AppConfigKeys.cs" />
     <Compile Include="Setting\ObjectRepsitory.cs" />
-    <Compile Include="TestBase\Page.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestCase\LoginTest.cs" />
     <Compile Include="TestCase\HomeTest.cs" />
@@ -123,19 +169,28 @@
     <Compile Include="TestCase\BalanceEnquiryTest.cs" />
     <Compile Include="TestCase\MiniStatementTest.cs" />
     <Compile Include="TestCase\CustomisedStatementTest.cs" />
+    <Compile Include="TestCase\UnitTest1.cs" />
     <Compile Include="TestCase\WithdrawalTest.cs" />
     <Compile Include="TestContextClass\TestClassContext.cs" />
+    <Compile Include="Utilities\ExtentReportsHelper.cs" />
+    <Compile Include="Utilities\Log4NetHelper.cs" />
+    <Compile Include="Utilities\MailUtil.cs" />
     <Compile Include="Utilities\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Config\App.config" />
+    <None Include="license" />
+    <None Include="Logs\FileLogger.log" />
     <None Include="packages.config" />
-    <None Include="TestData\Guru99Bank.csv" />
     <None Include="TestData\Guru99Bank.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logs\" />
+    <Folder Include="TestBase\" />
     <Folder Include="TestReports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\extent-config.xml" />
+    <Content Include="extent-config.xml" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

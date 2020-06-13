@@ -1,6 +1,5 @@
 ﻿using SeleniumPOM.Pages.Actions;
 
-
 namespace SeleniumPOM.Interfaces
 {
     interface IHomePage
@@ -89,12 +88,6 @@ namespace SeleniumPOM.Interfaces
         /// </summary>
         /// <returns>object of CustomisedStatement Page</returns>
         CustomisedStatementPage ClickOnCustomisedStatementPage();
-
-        /// <summary>
-        /// Click on Logout Link.
-        /// </summary>
-        /// <returns>Object of Logout Page</returns>
-        LogoutPage ClickOnLogoutPage();
 
     }
 }

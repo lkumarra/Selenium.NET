@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using SeleniumPOM.Interfaces;
-using SeleniumPOM.TestBase;
+using SeleniumPOM.BasePage;
 using System;
 
 namespace SeleniumPOM.Utilities

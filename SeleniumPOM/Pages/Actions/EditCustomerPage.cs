@@ -1,59 +1,66 @@
-﻿using OpenQA.Selenium.Support.PageObjects;
+﻿using log4net;
+using OpenQA.Selenium.Support.PageObjects;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Locators;
-using SeleniumPOM.TestBase;
+using SeleniumPOM.BasePage;
 using SeleniumPOM.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+
 
 namespace SeleniumPOM.Pages.Actions
 {
-    class EditCustomerPage  : Page, IEditCostumerPage
+    class EditCustomerPage : Page, IEditCostumerPage
     {
+        #region Objects 
+
         readonly Utils util = new Utils();
         EditCostumerLocator locator;
+        readonly ILog logger = Log4NetHelper.GetLogger(typeof(EditCustomerPage));
+
+        #endregion
 
         public EditCustomerPage()
         {
             locator = new EditCostumerLocator();
             PageFactory.InitElements(driver, locator);
-            
+
         }
 
         public void SetCostumerID(string CostumerID)
         {
             util.EnterTextIntoElement(locator.GetCostumerIDLocator(), CostumerID);
+            logger.Info("CustomerID message is : " + CostumerID);
         }
 
         public void ClickOnSubmitButton()
         {
             util.ClickOnElement(locator.GetSubmitButtonLocator());
+            logger.Info("Clicked on Submit Button");
         }
 
         public void ClickOnResetButton()
         {
             util.ClickOnElement(locator.GetResetButtonLocator());
+            logger.Info("Clicked on Reset Button");
         }
 
         public string GetCostumerIDMessage()
         {
-            return util.GetElementText(locator.GetCustomerIDMessageLocator());
+            string Text = util.GetElementText(locator.GetCustomerIDMessageLocator());
+            logger.Info("CustomerID Message is : " + Text);
+            return Text;
         }
 
         public string CustomerIDInvaildCharactersAndMessageText(string Characters)
         {
             SetCostumerID(Characters);
-            Thread.Sleep(1000);
             return GetCostumerIDMessage();
         }
 
         public string GetCostumerIDAlertMessage()
         {
-            return util.GetAlertTextAndAccept();
+            string AlertText = util.GetAlertTextAndAccept();
+            logger.Info("Alert Text is : " + AlertText);
+            return AlertText;
         }
 
     }

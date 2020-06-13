@@ -1,15 +1,11 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumPOM.Pages.Locators
 {
     class DeleteAccountLocator
     {
+        #region PageFactory
 
         [FindsBy(How = How.Name, Using = "accountno")]
         private IWebElement AccounNo { get; set; }
@@ -22,6 +18,10 @@ namespace SeleniumPOM.Pages.Locators
 
         [FindsBy(How = How.XPath, Using = "//label[contains(@id,'message')]")]
         private IWebElement AccountNoMessage { get; set; }
+
+        #endregion
+
+        #region GetterMethods
 
         /// <summary>
         /// Return the locator of AccountNumber on DeleteAccount Page.
@@ -58,6 +58,8 @@ namespace SeleniumPOM.Pages.Locators
         {
             return AccountNoMessage;
         }
+
+        #endregion
 
     }
 }

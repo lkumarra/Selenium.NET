@@ -1,15 +1,12 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumPOM.Pages.Locators
 {
     class EditCostumerLocator
     {
+        #region PageFactory
+
         [FindsBy(How = How.Name, Using = "cusid")]
         private IWebElement CosutumerId { get; set; }
 
@@ -21,6 +18,10 @@ namespace SeleniumPOM.Pages.Locators
 
         [FindsBy(How = How.Id, Using = "message14")]
         private IWebElement CustomerIDMessage { get; set; }
+
+        #endregion
+
+        #region GetterMethods
 
         /// <summary>
         /// Return the locator of Customer Id field.
@@ -57,6 +58,8 @@ namespace SeleniumPOM.Pages.Locators
         {
             return CustomerIDMessage;
         }
+
+        #endregion
 
     }
 }

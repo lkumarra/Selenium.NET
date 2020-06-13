@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumPOM.Config;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Actions;
-using SeleniumPOM.TestBase;
+using SeleniumPOM.BasePage;
 using SeleniumPOM.TestContextClass;
 
 namespace SeleniumPOM.TestCase
@@ -11,10 +11,15 @@ namespace SeleniumPOM.TestCase
     [TestClass]
     public class BalanceEnquiryTest : TestClassContext
     {
+        #region Fields
+
         ILoginPage loginPage;
         IConfig config;
         IHomePage homePage;
         IBalanceEnquiryPage balanceEnquiryPage;
+        public const string PAGE = "BalanceEnquiry$";
+
+        #endregion
 
         [TestInitialize]
         public void Setup()
@@ -27,9 +32,10 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "BalanceEnquiry$", DataAccessMethod.Sequential)]
+        [DataSource(EXCEL_PROPERTIES, EXCEL_SHEET_LOCATION, PAGE, DataAccessMethod.Sequential)]
         public void VerifyAccountNumberMessage()
         {
+            extent.CreateTest(TestContext.TestName);
             string ActualMessage = balanceEnquiryPage.EnterInvalidCharactersAndGetMessage(TestContext.DataRow["Data"].ToString());
             Assert.AreEqual(ActualMessage, TestContext.DataRow["ExpectedMessage"]);
         }
@@ -37,6 +43,7 @@ namespace SeleniumPOM.TestCase
         [TestCleanup]
         public void TearDown()
         {
+            SetUpResults(TestContext.CurrentTestOutcome.ToString());
             Page.QuitSession();
         }
     }

@@ -1,15 +1,12 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace SeleniumPOM.Pages.Locators
 {
     class FundTrasferLocator
     {
+        #region PageFactory 
 
         [FindsBy(How = How.Name, Using = "payersaccount")]
         private IWebElement PayersAccNo { get; set; }
@@ -31,6 +28,10 @@ namespace SeleniumPOM.Pages.Locators
 
         [FindsBy(How = How.XPath, Using = "//input[@name='payersaccount']/following-sibling::label")]
         private IWebElement PayersAccountMessage { get; set; }
+
+        #endregion
+
+        #region GetterMethods
 
         /// <summary>
         /// Return the locator of Payers Account Number field on Fund Transfer Page.
@@ -94,5 +95,7 @@ namespace SeleniumPOM.Pages.Locators
         {
             return PayersAccountMessage;
         }
+
+        #endregion
     }
 }

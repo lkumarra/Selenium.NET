@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumPOM.Config;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Actions;
-using SeleniumPOM.TestBase;
+using SeleniumPOM.BasePage;
 using SeleniumPOM.TestContextClass;
 
 namespace SeleniumPOM
@@ -12,9 +12,15 @@ namespace SeleniumPOM
     [TestClass]
     public class HomeTest : TestClassContext
     {
+        #region Fields 
+
         IHomePage homerPage;
         ILoginPage loginPage;
         IConfig config;
+        public const string PAGE = "HomePage$";
+
+        #endregion
+
         [TestInitialize]
         public void SetUp()
         {
@@ -25,25 +31,25 @@ namespace SeleniumPOM
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "HomePage$", DataAccessMethod.Sequential)]
+        [DataSource(EXCEL_PROPERTIES, EXCEL_SHEET_LOCATION, PAGE, DataAccessMethod.Sequential)]
         public void VerifyWelcomeMessage()
         {
-            Console.WriteLine("Test Case Name :{0}", TestContext.TestName);
+            extent.CreateTest(TestContext.TestName);
             Assert.AreEqual(homerPage.GetWelcomeMessage(), TestContext.DataRow["WelcomeMessage"]);
         }
 
         [TestMethod]
-        [DataSource("System.Data.Odbc", EXCEL_SHEET_LOCATION, "HomePage$", DataAccessMethod.Sequential)]
+        [DataSource(EXCEL_PROPERTIES, EXCEL_SHEET_LOCATION, PAGE, DataAccessMethod.Sequential)]
         public void VerifyMangerID()
         {
-            Console.WriteLine("Test Case Name :{0}", TestContext.TestName);
+            extent.CreateTest(TestContext.TestName);
             Assert.AreEqual(homerPage.GetManagerID(), TestContext.DataRow["ManegerID"]);
         }
 
         [TestCleanup]
         public void TearDown()
         {
-            Console.WriteLine("Resuult :{0}", TestContext.CurrentTestOutcome);
+            SetUpResults(TestContext.CurrentTestOutcome.ToString());
             Page.QuitSession();
         }
     }

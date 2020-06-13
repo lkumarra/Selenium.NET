@@ -1,4 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ReportingLibrary;
+using SeleniumPOM.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +20,45 @@ namespace SeleniumPOM.TestContextClass
             set { _testContext = value; }
         }
 
-        public const string EXCEL_SHEET_LOCATION = @"Dsn = Excel Files;dbq=C:\Users\Lavendra rajput\source\repos\SeleniumPOM\SeleniumPOM\TestData\Guru99Bank.xlsx;";
+        public const string EXCEL_SHEET_LOCATION = "Dsn = Excel Files;dbq=../../TestData/Guru99Bank.xlsx;";
+        public const string EXCEL_PROPERTIES = "System.Data.Odbc";
+
+        public static ExtentReportsHelper extent;
+
+        [AssemblyInitialize]
+        public static void SetUpReporter(TestContext context)
+        {
+            extent = new ExtentReportsHelper();
+        }
+
+        public void SetUpResults(string Status)
+        {
+            try
+            {
+                switch (Status)
+                {
+                    case "Failed":
+                        extent.SetTestStatusFail();
+                        break;
+                    case "Skipped":
+                        extent.SetTestStatusSkipped();
+                        break;
+                    default:
+                        extent.SetTestStatusPass();
+                        break;
+                }
+            }
+            catch (Exception e)
+            {
+                throw (e);
+            }
+        }
+
+        [AssemblyCleanup]
+        public static void CloseReporter()
+        {
+            extent.Close();
+            //MailUtil.SendAttachedReport();
+        }
     }
 }

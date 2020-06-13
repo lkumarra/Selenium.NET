@@ -1,15 +1,12 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumPOM.Pages.Locators
 {
     class DeleteCustomerLocator
     {
+        #region PageFactory 
+
         [FindsBy(How = How.Name, Using = "cusid")]
         private IWebElement CustomerID { get; set; }
 
@@ -21,6 +18,10 @@ namespace SeleniumPOM.Pages.Locators
 
         [FindsBy(How = How.XPath, Using = "//label[contains(@id, 'message')]")]
         private IWebElement CustomerIDMessage { get; set; }
+
+        #endregion
+
+        #region GetterMethods
 
         /// <summary>
         /// Return the locator of CustomerID Field on DeleteCustomer Page.
@@ -57,5 +58,7 @@ namespace SeleniumPOM.Pages.Locators
         {
             return CustomerIDMessage;
         }
+
+        #endregion
     }
 }

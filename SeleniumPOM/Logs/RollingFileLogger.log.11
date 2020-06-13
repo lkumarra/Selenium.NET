@@ -1,0 +1,10 @@
+13-Jun-2020-15:00:35 [SeleniumPOM.TestBase.Pagelass] [INFO] [Initialization] - Chrome is Launched
+13-Jun-2020-15:00:35 [SeleniumPOM.TestBase.Pagelass] [INFO] [Initialization] - All cookies are deleted
+13-Jun-2020-15:00:42 [SeleniumPOM.TestBase.Pagelass] [INFO] [Initialization] - Url : http://www.demo.guru99.com/V4/index.php is launched
+13-Jun-2020-15:00:44 [SeleniumPOM.TestBase.Pagelass] [INFO] [Initialization] - Window is Maximized
+13-Jun-2020-15:00:45 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetUserName] - UserName entered is : mngr265185
+13-Jun-2020-15:00:45 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetPassword] - Password entered is : segUsYg
+13-Jun-2020-15:00:46 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [ClickOnLogin] - Clicked on Login Button
+13-Jun-2020-15:00:48 [SeleniumPOM.Pages.Actions.HomePagelass] [INFO] [ClickOnNewCustomerLink] - Clicked on New Customer Page
+13-Jun-2020-15:00:49 [SeleniumPOM.Pages.Actions.NewCustomerPagelass] [INFO] [CustomerNameBlankVerify] - Customer Name Message is : Customer name must not be blank
+13-Jun-2020-15:00:50 [SeleniumPOM.TestBase.Pagelass] [INFO] [QuitSession] - Session is Quit

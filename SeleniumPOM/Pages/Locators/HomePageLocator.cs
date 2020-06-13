@@ -6,6 +6,8 @@ namespace SeleniumPOM.Pages.Locators
 {
     class HomePageLocator
     {
+        #region PageFactory 
+
         [FindsBy(How = How.XPath, Using = "//marquee[@class = 'heading3']")]
         private IWebElement WelcomeMessage { get; set; }
 
@@ -53,6 +55,10 @@ namespace SeleniumPOM.Pages.Locators
 
         [FindsBy(How = How.LinkText, Using = "Log out")]
         private IWebElement Logout { get; set; }
+
+        #endregion
+
+        #region GetterMethods
 
         /// <summary>
         /// Return the locator of welcome message.
@@ -197,5 +203,7 @@ namespace SeleniumPOM.Pages.Locators
         {
             return Logout;
         }
+
+        #endregion
     }
 }
