@@ -3,15 +3,15 @@
 # Selenium.NET Framework by Implementing Page Object Design Pattern
 
 # Project Stucture:
-1. **Config : This Folder Contains the App.congif file which is required for configuration**
+1. **Config : This Folder Contains the App.config file which is required for configuration**
 2. **CustomException : This Folder Contains the Custom Exception Class**
 3. **Interfaces : This folder contains all interface class**
 4. **Logs : This Folder Contains all logs**
 5. **Pages : This Folder is Divided into Two Sub Folders**
     1. *Actions : This folder contains actions class of every page*
     2. *Locators: This folder contains locators class of every page*
+    3. *BaseClass: This folder contains base class class*
 6. **Setting : This Folder Contains Basic Setting class**
-7. **TestBase : This Folder Contains TestBase Class**
 8. **TestCase : This Folder Contains All Unittest class**
 9. **TestContextClass : This Folder Contains TextClassContext Class**
 10. **TestData: This Folder Contains All TestData**

@@ -1,18 +1,22 @@
-13-Jun-2020-18:31:36 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Chrome is Launched
-13-Jun-2020-18:31:36 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - All cookies are deleted
-13-Jun-2020-18:31:43 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Url : http://www.demo.guru99.com/V4/index.php is launched
-13-Jun-2020-18:31:45 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Window is Maximized
-13-Jun-2020-18:31:45 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetUserName] - UserName entered is : mngr265185
-13-Jun-2020-18:31:45 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetPassword] - Password entered is : segUsYg
-13-Jun-2020-18:31:46 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [ClickOnLogin] - Clicked on Login Button
-13-Jun-2020-18:31:47 [SeleniumPOM.Pages.Actions.HomePagelass] [INFO] [GetManagerID] - MangerID is : Manger Id : mngr265185
-13-Jun-2020-18:31:47 [SeleniumPOM.BasePage.Pagelass] [INFO] [QuitSession] - Session is Quit
-13-Jun-2020-18:31:50 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Chrome is Launched
-13-Jun-2020-18:31:50 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - All cookies are deleted
-13-Jun-2020-18:31:57 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Url : http://www.demo.guru99.com/V4/index.php is launched
-13-Jun-2020-18:31:59 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Window is Maximized
-13-Jun-2020-18:31:59 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetUserName] - UserName entered is : mngr265185
-13-Jun-2020-18:31:59 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetPassword] - Password entered is : segUsYg
-13-Jun-2020-18:32:00 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [ClickOnLogin] - Clicked on Login Button
-13-Jun-2020-18:32:00 [SeleniumPOM.Pages.Actions.HomePagelass] [INFO] [GetWelcomeMessage] - Welcome message is : Welcome To Manager's Page of Guru99 Bank
-13-Jun-2020-18:32:01 [SeleniumPOM.BasePage.Pagelass] [INFO] [QuitSession] - Session is Quit
+16-Jun-2020-11:40:05 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Chrome is Launched
+16-Jun-2020-11:40:06 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - All cookies are deleted
+16-Jun-2020-11:40:14 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Url : http://www.demo.guru99.com/V4/index.php is launched
+16-Jun-2020-11:40:17 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Window is Maximized
+16-Jun-2020-11:40:17 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetUserName] - UserName entered is : mngr265185
+16-Jun-2020-11:40:17 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetPassword] - Password entered is : segUsYg
+16-Jun-2020-11:40:18 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [ClickOnLogin] - Clicked on Login Button
+16-Jun-2020-11:40:21 [SeleniumPOM.Pages.Actions.HomePagelass] [INFO] [ClickOnNewAccountPage] - Clicked on New Account Page
+16-Jun-2020-11:40:21 [SeleniumPOM.Pages.Actions.NewAccountPagelass] [INFO] [SetCustomerID] - CustomerID entered is : abcdef
+16-Jun-2020-11:40:22 [SeleniumPOM.Pages.Actions.NewAccountPagelass] [INFO] [GetCustomerIDMessage] - CustomerId Message is : Characters are not allowed
+16-Jun-2020-11:40:22 [SeleniumPOM.BasePage.Pagelass] [INFO] [QuitSession] - Session is Quit
+16-Jun-2020-11:40:25 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Chrome is Launched
+16-Jun-2020-11:40:26 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - All cookies are deleted
+16-Jun-2020-11:40:31 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Url : http://www.demo.guru99.com/V4/index.php is launched
+16-Jun-2020-11:40:33 [SeleniumPOM.BasePage.Pagelass] [INFO] [Initialization] - Window is Maximized
+16-Jun-2020-11:40:34 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetUserName] - UserName entered is : mngr265185
+16-Jun-2020-11:40:34 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [SetPassword] - Password entered is : segUsYg
+16-Jun-2020-11:40:36 [SeleniumPOM.Pages.Actions.LoginPagelass] [INFO] [ClickOnLogin] - Clicked on Login Button
+16-Jun-2020-11:40:39 [SeleniumPOM.Pages.Actions.HomePagelass] [INFO] [ClickOnNewAccountPage] - Clicked on New Account Page
+16-Jun-2020-11:40:39 [SeleniumPOM.Pages.Actions.NewAccountPagelass] [INFO] [SetCustomerID] - CustomerID entered is : !"#$%&'()))))))
+16-Jun-2020-11:40:39 [SeleniumPOM.Pages.Actions.NewAccountPagelass] [INFO] [GetCustomerIDMessage] - CustomerId Message is : Special characters are not allowed
+16-Jun-2020-11:40:40 [SeleniumPOM.BasePage.Pagelass] [INFO] [QuitSession] - Session is Quit

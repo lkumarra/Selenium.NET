@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\SeleniumPOM",
-    "\\SeleniumPOM\\Pages",
-    "\\SeleniumPOM\\TestCase"
+    "\\SeleniumPOM\\TestContextClass"
   ],
-  "SelectedNode": "\\SeleniumPOM\\TestCase",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }
