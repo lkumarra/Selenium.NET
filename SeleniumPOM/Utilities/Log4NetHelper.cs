@@ -15,7 +15,7 @@ namespace SeleniumPOM.Utilities
         private static ConsoleAppender _consoleAppender;
         private static FileAppender _fileAppender;
         private static RollingFileAppender _rollingFileAppender;
-        private static string layout = "%date{dd-MMM-yyyy-HH:mm:ss} [%Class] [%level] [%method] - %message%newline";
+        private static string layout = "%date{dd-MMM-yyyy-HH:mm:ss} [%class] [%level] [%method] - %message%newline";
 
         #endregion
 
@@ -60,7 +60,7 @@ namespace SeleniumPOM.Utilities
                 Layout = GetPatternLayout(),
                 Threshold = Level.All,
                 AppendToFile = false,
-                File = "../../Logs/FileLogger.log"
+                File = "Logs/FileLogger.log"
             };
             fileAppender.ActivateOptions();
             return fileAppender;
@@ -72,7 +72,7 @@ namespace SeleniumPOM.Utilities
             {
                 Name = "Rolling File Appender",
                 AppendToFile = false,
-                File = "../../Logs/RollingFileLogger.log",
+                File = "Logs/RollingFileLogger.log",
                 Layout = GetPatternLayout(),
                 Threshold = Level.All,
                 MaxSizeRollBackups = 15,
@@ -109,6 +109,5 @@ namespace SeleniumPOM.Utilities
             return _logger;
         }
         #endregion
-
     }
 }

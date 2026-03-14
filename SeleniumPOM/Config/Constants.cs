@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SeleniumPOM.Config
+﻿namespace SeleniumPOM.Config
 {
     class Constants
     {
@@ -14,6 +8,6 @@ namespace SeleniumPOM.Config
         public static readonly string TO_USER_NAME = "";
         public static readonly string SUBJECT = "Test Reports";
         public static readonly string PASSWORD = "";
-        public static readonly string REPORT_PATH = "../../TestReports/extent.html";
+        public static readonly string REPORT_PATH = "TestReports/extent.html";
     }
 }

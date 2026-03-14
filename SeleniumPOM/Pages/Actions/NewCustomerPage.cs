@@ -1,5 +1,5 @@
 ﻿using log4net;
-using OpenQA.Selenium.Support.PageObjects;
+using SeleniumExtras.PageObjects;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Locators;
 using SeleniumPOM.BasePage;
@@ -24,13 +24,11 @@ namespace SeleniumPOM.Pages.Actions
             PageFactory.InitElements(driver, locators);
         }
 
-
         public void SetCustomerName(string CustomerName)
         {
             util.EnterTextIntoElement(locators.GetCustomerNameLocator(), CustomerName);
             logger.Info("Customer Name Entered is : " + CustomerName);
         }
-
 
         public void SelectMale()
         {
@@ -44,7 +42,6 @@ namespace SeleniumPOM.Pages.Actions
             logger.Info("Female option is selected");
         }
 
-
         public void SetDateOfBirth(string DOB)
         {
             util.EnterTextIntoElement(locators.GetDOBLocator(), DOB);
@@ -56,7 +53,6 @@ namespace SeleniumPOM.Pages.Actions
             util.EnterTextIntoElement(locators.GetAddressLocator(), Address);
             logger.Info("Address entered is : " + Address);
         }
-
 
         public void SetCity(string City)
         {

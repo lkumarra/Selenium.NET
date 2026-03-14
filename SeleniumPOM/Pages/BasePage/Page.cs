@@ -1,5 +1,4 @@
 ﻿using log4net;
-using log4net.Repository.Hierarchy;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
@@ -8,8 +7,6 @@ using SeleniumPOM.CustomException;
 using SeleniumPOM.Setting;
 using SeleniumPOM.Utilities;
 using System;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumPOM.BasePage
 {
@@ -19,21 +16,22 @@ namespace SeleniumPOM.BasePage
         public static IWebDriver driver = null;
 
         /// <summary>
-        /// Intitialize the Webdriver.
+        /// Initialize the Webdriver.
+        /// Selenium 4.x includes built-in Selenium Manager for automatic driver management.
         /// </summary>
         public static void Initialization()
         {
             ObjectRepsitory.config = new AppConfigReader();
             if (ObjectRepsitory.config.GetBrowser().Equals("Chrome"))
             {
-                new DriverManager().SetUpDriver(new ChromeConfig());
-                driver = new ChromeDriver();
+                var options = new ChromeOptions();
+                driver = new ChromeDriver(options);
                 logger.Info("Chrome is Launched");
             }
             else if (ObjectRepsitory.config.GetBrowser().Equals("Firefox"))
             {
-                new DriverManager().SetUpDriver(new FirefoxConfig());
-                driver = new FirefoxDriver();
+                var options = new FirefoxOptions();
+                driver = new FirefoxDriver(options);
                 logger.Info("Firefox is Launched");
             }
             else
@@ -51,15 +49,16 @@ namespace SeleniumPOM.BasePage
         }
 
         /// <summary>
-        /// Quit the session .
+        /// Quit the session.
         /// </summary>
         public static void QuitSession()
         {
-            driver.Quit();
-            logger.Info("Session is Quit");
+            if (driver != null)
+            {
+                driver.Quit();
+                driver = null;
+                logger.Info("Session is Quit");
+            }
         }
     }
-
 }
-
-

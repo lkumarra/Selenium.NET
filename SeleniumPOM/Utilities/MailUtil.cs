@@ -2,7 +2,6 @@
 using System;
 using System.Net;
 using System.Net.Mail;
-using System.Net.Mime;
 
 namespace SeleniumPOM.Utilities
 {
@@ -36,7 +35,6 @@ namespace SeleniumPOM.Utilities
             {
                 Console.WriteLine(ex.Message);
             }
-
         }
     }
 }

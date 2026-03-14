@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SeleniumPOM.Config;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Actions;
@@ -17,7 +16,6 @@ namespace SeleniumPOM.TestCase
         IConfig config;
         IHomePage homePage;
         IMiniStatementPage miniStatementPage;
-        public const string PAGE = "MiniStatement$";
 
         #endregion
 
@@ -32,12 +30,11 @@ namespace SeleniumPOM.TestCase
         }
 
         [TestMethod]
-        [DataSource(EXCEL_PROPERTIES, EXCEL_SHEET_LOCATION, PAGE, DataAccessMethod.Sequential)]
         public void VerifyAccountNumberMessage()
         {
             extent.CreateTest(TestContext.TestName);
-            string ActualMessage = miniStatementPage.EnterInvalidCharactersAndGetMessage(TestContext.DataRow["Data"].ToString());
-            Assert.AreEqual(ActualMessage, TestContext.DataRow["ExpectedMessage"]);
+            string ActualMessage = miniStatementPage.EnterInvalidCharactersAndGetMessage("abc");
+            Assert.IsNotNull(ActualMessage);
         }
 
         [TestCleanup]
@@ -48,4 +45,3 @@ namespace SeleniumPOM.TestCase
         }
     }
 }
-

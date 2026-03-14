@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
-
+using SeleniumExtras.PageObjects;
 
 namespace SeleniumPOM.Pages.Locators
 {
@@ -60,145 +59,81 @@ namespace SeleniumPOM.Pages.Locators
 
         #region GetterMethods
 
-        /// <summary>
-        /// Return the locator of welcome message.
-        /// </summary>
-        /// <returns>Welcome Message Locator</returns>
         public IWebElement GetWelcomeMessageLocator()
         {
             return WelcomeMessage;
         }
 
-        /// <summary>
-        /// Return the Locator of Manager ID.
-        /// </summary>
-        /// <returns>Manager ID Locator</returns>
         public IWebElement GetManagerIDLocator()
         {
             return ManagerID;
         }
 
-        /// <summary>
-        /// Return the Locator of EditCustomer Link.
-        /// </summary>
-        /// <returns>New Customer Link Locator</returns>
         public IWebElement GetNewCustomerLinkLocator()
         {
             return NewCustomerLink;
         }
 
-        /// <summary>
-        /// Return the locator of NewCustomer Link.
-        /// </summary>
-        /// <returns>Edit Customer Link Locator</returns>
         public IWebElement GetEditCustomerLinkLocator()
         {
             return EditCustomer;
         }
 
-        /// <summary>
-        /// Return the locator of DeleteCustomer Link.
-        /// </summary>
-        /// <returns>DeleteCustomer link locator</returns>
         public IWebElement GetDeleteCustomerLinkLocator()
         {
             return DeleteCustomer;
         }
 
-        /// <summary>
-        /// Return the Locator of NewAccount Link.
-        /// </summary>
-        /// <returns>NewAccount Link Locator</returns>
         public IWebElement GetNewAccountLinkLocator()
         {
             return NewAccount;
         }
 
-        /// <summary>
-        /// Return the locator of EditAccount Link.
-        /// </summary>
-        /// <returns>EditAccount Link Locator</returns>
         public IWebElement GetEditAccountLinkLocator()
         {
             return EditAccount;
         }
 
-        /// <summary>
-        /// Return the locator of DeleteAccount Link.
-        /// </summary>
-        /// <returns></returns>
         public IWebElement GetDeleteAccountLinkLocator()
         {
             return DeleteAccount;
         }
 
-        /// <summary>
-        /// Return the locator of Deposit Link.
-        /// </summary>
-        /// <returns>Deposit Link Locator</returns>
         public IWebElement GetDepositLinkLocator()
         {
             return Deposit;
         }
 
-        /// <summary>
-        /// Return the locator of withdrawal Link
-        /// </summary>
-        /// <returns>Withdrawal link locator</returns>
         public IWebElement GetWithdrawalLinkLocator()
         {
             return Withdrawl;
         }
 
-        /// <summary>
-        /// Return the locator of fundtransfer link.
-        /// </summary>
-        /// <returns>FundTransfer Link Locator</returns>
         public IWebElement GetFundTransferLinkLocator()
         {
             return FundTrasfer;
         }
 
-        /// <summary>
-        /// Return the locator of ChangePassword Link.
-        /// </summary>
-        /// <returns>ChangePassword Link Locator</returns>
         public IWebElement GetChangePasswordLinkLocator()
         {
             return ChangePassword;
         }
 
-        /// <summary>
-        /// Return the locator of BalaceEnquiry Link.
-        /// </summary>
-        /// <returns>Balance Enquiry Link Locator.</returns>
         public IWebElement GetBalanceEnquiryLinkLocator()
         {
             return BalanceEnquiry;
         }
 
-        /// <summary>
-        /// Return the locator of Ministatement link.
-        /// </summary>
-        /// <returns>MiniStatement Link Locator</returns>
         public IWebElement GetMiniStatementLinkLocator()
         {
             return MiniStatement;
         }
 
-        /// <summary>
-        /// Return the locator of Customised link.
-        /// </summary>
-        /// <returns>Customised Link Locator</returns>
         public IWebElement GetCustomisedStatementLinkLocator()
         {
             return CustomisedStatement;
         }
 
-        /// <summary>
-        /// Return the locator of logour link.
-        /// </summary>
-        /// <returns>Logout Link Locator</returns>
         public IWebElement GetLogoutLinkLocator()
         {
             return Logout;

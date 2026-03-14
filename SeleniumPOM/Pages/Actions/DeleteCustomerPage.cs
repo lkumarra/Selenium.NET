@@ -1,10 +1,9 @@
 ﻿using log4net;
-using OpenQA.Selenium.Support.PageObjects;
+using SeleniumExtras.PageObjects;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.Pages.Locators;
 using SeleniumPOM.BasePage;
 using SeleniumPOM.Utilities;
-
 
 namespace SeleniumPOM.Pages.Actions
 {

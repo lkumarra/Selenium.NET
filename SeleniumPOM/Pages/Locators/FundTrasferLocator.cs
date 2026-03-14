@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
-
+using SeleniumExtras.PageObjects;
 
 namespace SeleniumPOM.Pages.Locators
 {
@@ -33,68 +32,13 @@ namespace SeleniumPOM.Pages.Locators
 
         #region GetterMethods
 
-        /// <summary>
-        /// Return the locator of Payers Account Number field on Fund Transfer Page.
-        /// </summary>
-        /// <returns>Locator of Payers Account Number Field</returns>
-        public IWebElement GetPayersAccNoLocator()
-        {
-            return PayersAccNo;
-        }
-
-        /// <summary>
-        /// Return the locator of Payees Account Number field on Fund Transfer Page.
-        /// </summary>
-        /// <returns>Locator of Payess Account Number field</returns>
-        public IWebElement GetPayessAccNoLocator()
-        {
-            return PayeesAccNo;
-        }
-
-        /// <summary>
-        /// Return the locator of Amount Field on Fund Transfer Page.
-        /// </summary>
-        /// <returns>Locator of Amount field</returns>
-        public IWebElement GetAmountLocator()
-        {
-            return Amount;
-        }
-
-        /// <summary>
-        /// Return the locator of Description Field on Fund Transfer Page.
-        /// </summary>
-        /// <returns>Locator of Description field</returns>
-        public IWebElement GetDescriptionLocator()
-        {
-            return Description;
-        }
-
-        /// <summary>
-        /// Return the locator of Submit Button on Fund Transfer Page.
-        /// </summary>
-        /// <returns>Locator of Submit Button</returns>
-        public IWebElement GetSubmitButtonLocator()
-        {
-            return SubmitButton;
-        }
-
-        /// <summary>
-        /// Return the locator of Reset Button on Fund Transfer Page.
-        /// </summary>
-        /// <returns>Locator of Reset Button</returns>
-        public IWebElement GetResetButtonLocator()
-        {
-            return ResetButton;
-        }
-
-        /// <summary>
-        /// Return the locator of PayersAccount Number Message.
-        /// </summary>
-        /// <returns>Payers Account Number Message</returns>
-        public IWebElement GetPayersAccountMessageLocator()
-        {
-            return PayersAccountMessage;
-        }
+        public IWebElement GetPayersAccNoLocator() => PayersAccNo;
+        public IWebElement GetPayessAccNoLocator() => PayeesAccNo;
+        public IWebElement GetAmountLocator() => Amount;
+        public IWebElement GetDescriptionLocator() => Description;
+        public IWebElement GetSubmitButtonLocator() => SubmitButton;
+        public IWebElement GetResetButtonLocator() => ResetButton;
+        public IWebElement GetPayersAccountMessageLocator() => PayersAccountMessage;
 
         #endregion
     }

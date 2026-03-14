@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
-
+using SeleniumExtras.PageObjects;
 
 namespace SeleniumPOM.Pages.Locators
 {
@@ -29,7 +28,6 @@ namespace SeleniumPOM.Pages.Locators
         [FindsBy(How = How.Name, Using = "res")]
         private IWebElement ResetButton { get; set; }
 
-
         [FindsBy(How = How.XPath, Using = "//input[@name='accountno']/following-sibling::label")]
         private IWebElement AccountNumberMessage { get; set; }
 
@@ -37,77 +35,14 @@ namespace SeleniumPOM.Pages.Locators
 
         #region GetterMethods
 
-        /// <summary>
-        /// Retun the locator of account number field on CustomisedStatement Page.
-        /// </summary>
-        /// <returns>Locator of account number filed</returns>
-        public IWebElement GetAccountNumberLocator()
-        {
-            return AccountNo;
-        }
-
-        /// <summary>
-        /// Return the locator of FromDate field in Customised Statement Page.
-        /// </summary>
-        /// <returns>Locator of FroDate field </returns>
-        public IWebElement GetFromDateLocator()
-        {
-            return FromDate;
-        }
-
-        /// <summary>
-        /// Return the locator of To Date field on Customised statement page.
-        /// </summary>
-        /// <returns>Locator of to date field</returns>
-        public IWebElement GetToDateLocator()
-        {
-            return ToDate;
-        }
-
-        /// <summary>
-        /// Return the locator of Minimum Transaction Value on CustomisedStatement Page.
-        /// </summary>
-        /// <returns>Locator of Minimum Transaction Value</returns>
-        public IWebElement GetMinimumTransactionValueLocator()
-        {
-            return MinimumTransactionValue;
-        }
-
-        /// <summary>
-        /// Return the locator of Number of Transaction on CustomisedStatement Page.
-        /// </summary>
-        /// <returns>Locator of Number of Transaction field</returns>
-        public IWebElement GetNumberOfTransactionLocator()
-        {
-            return NumberOfTransaction;
-        }
-
-        /// <summary>
-        /// Return the Locator of Submit Button on CustomisedStatement page. 
-        /// </summary>
-        /// <returns>Locator of Submit Button</returns>
-        public IWebElement GetSubmitButtonLocator()
-        {
-            return SubmitButton;
-        }
-
-        /// <summary>
-        /// Return the Locator of Reset Button on CustomisedStatement page. 
-        /// </summary>
-        /// <returns>Locator of Reset Button</returns>
-        public IWebElement GetResetButtonLocator()
-        {
-            return ResetButton;
-        }
-
-        /// <summary>
-        /// Return the locator of Account Number Message on Customised Statement Page
-        /// </summary>
-        /// <returns>Locator of Account Number Message</returns>
-        public IWebElement GetAccountNumberMessageLocator()
-        {
-            return AccountNumberMessage;
-        }
+        public IWebElement GetAccountNumberLocator() => AccountNo;
+        public IWebElement GetFromDateLocator() => FromDate;
+        public IWebElement GetToDateLocator() => ToDate;
+        public IWebElement GetMinimumTransactionValueLocator() => MinimumTransactionValue;
+        public IWebElement GetNumberOfTransactionLocator() => NumberOfTransaction;
+        public IWebElement GetSubmitButtonLocator() => SubmitButton;
+        public IWebElement GetResetButtonLocator() => ResetButton;
+        public IWebElement GetAccountNumberMessageLocator() => AccountNumberMessage;
 
         #endregion
     }

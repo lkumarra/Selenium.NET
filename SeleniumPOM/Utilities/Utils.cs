@@ -1,54 +1,54 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using SeleniumPOM.Interfaces;
 using SeleniumPOM.BasePage;
 using System;
 
 namespace SeleniumPOM.Utilities
 {
-
     class Utils : Page, IUtil
     {
         private static void ElementToBeClickableWait(IWebElement element)
         {
-            WebDriverWait wait = new WebDriverWait(driver, new TimeSpan(0, 0, 0, 10, 0));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.ElementToBeClickable(element));
         }
 
         private static void ElementToBeVisibleWait(IWebElement element)
         {
-            WebDriverWait wait = new WebDriverWait(driver, new TimeSpan(0, 0, 0, 10, 0));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.ElementToBeClickable(element));
         }
 
         public void ClickOnElement(IWebElement element)
         {
-            Utils.ElementToBeClickableWait(element);
+            ElementToBeClickableWait(element);
             element.Click();
         }
 
         public void EnterTextIntoElement(IWebElement element, string text)
         {
-            Utils.ElementToBeClickableWait(element);
+            ElementToBeClickableWait(element);
             element.SendKeys(text);
         }
 
         public void EnterTextIntoElementWithClear(IWebElement element, string text)
         {
-            Utils.ElementToBeClickableWait(element);
+            ElementToBeClickableWait(element);
             element.Clear();
             element.SendKeys(text);
         }
 
         public string GetElementText(IWebElement element)
         {
-            Utils.ElementToBeVisibleWait(element);
+            ElementToBeVisibleWait(element);
             return element.Text;
         }
 
         public string GetElementAttribute(IWebElement element, string attribute)
         {
-            Utils.ElementToBeVisibleWait(element);
+            ElementToBeVisibleWait(element);
             return element.GetAttribute(attribute);
         }
 
